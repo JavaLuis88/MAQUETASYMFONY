@@ -1,0 +1,52 @@
+#Menu de navegacion
+menu: Menú
+inicio: Inicio
+calendario.ofertas: Calendario de ofertas
+ofertas.recinto: Ofertas del recinto
+lenguaje: Lenguaje
+lenguaje.espanol: Español
+leguaje.ingles: Ingles
+#Pagina de inicio
+no.hay.ofertas.dia: No hay ofertas el dia de hoy
+los.dias.del: Los días del
+por.solo: por solo
+euros: Euros
+reservar: Reservar
+ofertas.del.dia: Ofertas del dia
+#Pagina calendario
+lunes: Lunes
+martes: Martes
+miercoles: Miercoles
+jueves: Jueves
+viernes: Viernes
+sabado: Sabado
+domingo: Domingo
+enero: Enero
+febrero: Febrero
+marzo: Marzo 
+abril: Abril
+mayo: Mayo
+junio: Junio
+julio: Julio
+agosto: Agosto
+septiembre: Septiembre
+octubre: Octubre
+noviembre: Noviembre
+diciembre: Diciembre
+mes: Mes
+anyo: Año
+ver.ofertas.mes: Ver ofertas del mes
+cargando: Cargando
+se.ha.producido.un.error: Se ha producido un error
+
+#Pagina de reserva
+nombre: Nombre
+apellidos: Apellidos
+direccion: Direccion
+medio.de.pago: Medio de pago
+oferta.ya.no.disponible: La oferta ya no esta disponible
+reserva.realizada: La reserva ya se ha realizado
+error.reserva: Error al realizar la reserva
+volver.inicio: Volver al inicio
+introduce.tus.datos: Introduce tus datos
+

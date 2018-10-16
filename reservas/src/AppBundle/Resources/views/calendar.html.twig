@@ -1,0 +1,70 @@
+{% extends 'plantilla.html.twig'%}
+{%block titulo%}{%trans%}calendario.ofertas{%endtrans%}{%endblock%}
+{%block scripts%}
+    <script src="{{ path('ajaxurl', { '_locale': datoscomun._locale }) }}"></script>
+    <script src="{{ asset('assets/js/ArgumentValueNotValidException.js')}}"></script>
+    <script src="{{ asset('assets/js/Calendar.js')}}"></script>
+    <script src="{{ asset('assets/js/Ajax.js')}}"></script>
+
+{%endblock%}
+
+{%block seccion%}
+    <section class="container-fluid">
+        <article  class="pt-2">
+            <div class="d-flex justify-content-center">
+                <form class="form-inline">
+
+
+
+                    <label  for="slcmes" class="form-label">{%trans%}mes{%endtrans%}</label>
+
+                    <select  name="slcmes" id="slcmes" class="form-control ml-2">
+                        <option value="1">{%trans%}enero{%endtrans%}</option>
+                        <option value="2">{%trans%}febrero{%endtrans%}</option>
+                        <option value="3">{%trans%}marzo{%endtrans%}</option>
+                        <option value="4">{%trans%}abril{%endtrans%}</option>
+                        <option value="5">{%trans%}mayo{%endtrans%}</option>
+                        <option value="6">{%trans%}junio{%endtrans%}</option>
+                        <option value="7">{%trans%}julio{%endtrans%}</option>
+                        <option value="8">{%trans%}agosto{%endtrans%}</option>
+                        <option value="9">{%trans%}septiembre{%endtrans%}</option>
+                        <option value="10">{%trans%}octubre{%endtrans%}</option>
+                        <option value="11">{%trans%}noviembre{%endtrans%}</option>
+                        <option value="12">{%trans%}diciembre{%endtrans%}</option>
+
+                    </select>
+
+
+                    <label  for="slcanyo" class="form-label ml-2">{%trans%}anyo{%endtrans%}</label>
+
+                    <select  name="slcanyo"id="slcanyo" class="form-control ml-2">
+                        {% for i in range(1970, 9999) %}
+                            <option value="{{i}}">{{i}}</option>
+                        {% endfor %}
+                    </select>
+
+                    <button name="btnverdiasofertas" id="btnverdiasofertas" type="button" class="form-control ml-2">
+                        {%trans%}ver.ofertas.mes{%endtrans%}
+                    </button>
+
+
+                </form>
+            </div>
+        </article>  
+        <article class="container-fluid pt-2">
+
+            <article id="calendario" class="container">
+         
+            </article>    
+
+
+            <article  id="oferta" class="container-fluid">
+              
+            </article> 
+        </article>
+                    
+         
+                    
+                    
+    </section>
+{%endblock%}

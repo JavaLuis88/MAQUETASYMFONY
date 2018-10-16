@@ -1,0 +1,44 @@
+class Language{
+
+  constructor() {
+
+    this.languageslist=new Array();
+    this.languagefile=new Map();
+
+    {% for clave,valor in datospropios.languageslist %}
+      this.languageslist[{{clave}}]="{{valor}}";
+    {%endfor%}
+    
+     {% for clave,valor in datospropios.languagefile %}
+      this.languagefile.set("{{clave}}","{{valor}}");
+    {%endfor%}
+
+  }
+
+  getLangueList() {
+  
+    return this.languageslist;
+    
+  
+  
+  }
+  getLangugeEntry(key) {
+    let retval;
+    retval=""
+    
+  
+    if (this.languagefile.get(key)!=undefined && this.languagefile.get(key)!=null) {
+  
+      retval=this.languagefile.get(key);
+    
+  
+  
+    }
+    else {
+      retval=null;
+    }
+  
+    return retval;
+  }
+
+}

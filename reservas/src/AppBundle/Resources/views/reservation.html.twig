@@ -1,0 +1,97 @@
+{% extends 'plantilla.html.twig'%}
+{%block titulo%}{%trans%}reservar{%endtrans%}{%endblock%}
+{%block scripts%}
+    <script src="{{ path('ajaxurl', { '_locale': datoscomun._locale }) }}"></script>
+    <script src="{{ asset('assets/js/ArgumentValueNotValidException.js')}}"></script>
+    <script src="{{ asset('assets/js/Calendar.js')}}"></script>
+    <script src="{{ asset('assets/js/Ajax.js')}}"></script>
+
+{%endblock%}
+
+{%block seccion%}
+    <section>
+        <article  class="pt-2">
+            {%if errores!=0%}
+                <p class="text-center"><strong> {%trans%}oferta.ya.no.disponible{%endtrans%}</strong></p> 
+                <p class="text-center">
+                    <a href="{{ path('homepagelanguage', { '_locale': datoscomun._locale ,'idoferta':datospropios.idoferta}) }}" class="btn btn-info enlacereserva">{%trans%}volver.inicio{%endtrans%}</a>
+
+                </p>    
+            {%elseif datospropios.formulario==NULL%}
+
+                {%if datospropios.alamacenado==TRUE%}
+
+                    <p class="text-center pt-2"><strong>{%trans%}reserva.realizada{%endtrans%}</strong></p>
+
+                {%else%}    
+
+                    <p class="text-center pt-2"><strong>{%trans%}error.reserva{%endtrans%}</strong></p>
+
+
+                {%endif%}
+
+                <p class="text-center">
+                    <a href="{{ path('homepagelanguage', { '_locale': datoscomun._locale ,'idoferta':datospropios.idoferta}) }}" class="btn btn-info enlacereserva">{%trans%}volver.inicio{%endtrans%}</a>
+
+                </p>    
+
+
+            {%else%} 
+   
+                <div class="container">
+                    <p>
+                        {%trans%}introduce.tus.datos{%endtrans%}
+                    </p>
+                    
+                    
+                    {{ form_start(datospropios.formulario) }}
+                    {{ form_errors(datospropios.formulario) }}
+
+                    <div class="form-group">
+
+
+
+
+
+                        {{ form_label(datospropios.formulario.nombre) }}
+                        {{ form_widget(datospropios.formulario.nombre) }}
+                        {{ form_errors(datospropios.formulario.nombre) }}
+
+                    </div>
+
+                    <div class="form-group">
+                        {{ form_label(datospropios.formulario.apellidos) }}
+                        {{ form_widget(datospropios.formulario.apellidos) }}
+                        {{ form_errors(datospropios.formulario.apellidos) }}
+
+
+                    </div>
+
+
+
+                    <div class="form-group">
+                        {{ form_label(datospropios.formulario.direccion) }}
+                        {{ form_widget(datospropios.formulario.direccion) }}
+                        {{ form_errors(datospropios.formulario.direccion) }}
+                    </div>
+
+                    <div class="form-group">
+                        {{ form_label(datospropios.formulario.mediopago) }}
+                        {{ form_widget(datospropios.formulario.mediopago) }}
+                        {{ form_errors(datospropios.formulario.mediopago) }}
+                    </div>
+                    <div class="form-group">
+                        {{ form_widget(datospropios.formulario.save) }}
+                    </div>
+
+                    {{ form_end(datospropios.formulario) }}
+
+
+                </div>
+            {%endif%}
+
+
+
+        </article>
+    </section>
+{%endblock%}

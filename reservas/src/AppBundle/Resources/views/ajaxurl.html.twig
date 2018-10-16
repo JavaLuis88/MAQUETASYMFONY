@@ -1,0 +1,13 @@
+class AjaxURL {
+
+constructor() {
+
+    this.daysWithOffer="{{ path('getdayswithoffer', { '_locale': datoscomun._locale }) }}";
+    this.offersDay="{{ path('getoffersday', { '_locale': datoscomun._locale }) }}";
+    this.reservation="{{ path('reservation', { '_locale': datoscomun._locale ,'idoferta':'0'}) }}";
+    this.reservation=this.reservation.substring(0,this.reservation.length-2);
+
+
+  }
+
+}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="{{datoscomun._locale}}">
+    <head>
+        <title>{%block titulo%}{%endblock%}</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+        <link rel="stylesheet" href="{{ asset('assets/vendor/bootstrap/dist/css/bootstrap.css')}}" media="screen">
+        <link rel="stylesheet" href="{{ asset('assets/css/hoja.css')}}">
+        <script src="{{ asset('assets/vendor/tether/dist/js/tether.js')}}"></script>
+        <script src="{{ asset('assets/vendor/jquery/dist/jquery.js')}}"></script>
+        <script src="{{ asset('assets/vendor/popper/dist/umd/popper.js')}}"></script>
+        <script src="{{ asset('assets/vendor/bootstrap/dist/js/bootstrap.js')}}"></script>
+        <script src="{{ path('language', { '_locale': datoscomun._locale }) }}"></script>
+        <script src="{{ asset('assets/js/Controller.js')}}"></script>
+        {%block estilos%}
+
+        {%endblock%}
+
+
+        {%block scripts%}
+
+        {%endblock%}
+
+
+    </head>
+    <body id="cuerpopartepublica">
+        {%block  cabecera%}
+            <header id="cabeceracontenidopartepublica" class="container-fluid coloresprimarios">
+            </header>
+        {%endblock%}
+
+        {%block barra%}
+
+
+
+            <nav class="navbar navbar-toggleable-md navbar-inverse bg-info">
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand" href="#">&nbsp;</a>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            {%if datoscomun._route=="homepagelanguage"%}
+                                <a class="nav-link active" href="{{ path('homepagelanguage', { '_locale': datoscomun._locale }) }}">{%trans%}inicio{%endtrans%} <span class="sr-only">(current)</span></a>
+
+                            {%else%}
+                                <a class="nav-link" href="{{ path('homepagelanguage', { '_locale': datoscomun._locale }) }}">{%trans%}inicio{%endtrans%} <span class="sr-only">(current)</span></a>
+
+                            {%endif%}
+
+
+                        </li>
+                        <li class="nav-item">
+                            {%if datoscomun._route=="calendaroffer"%}
+                                <a class="nav-link active" href="{{ path('calendaroffer', { '_locale': datoscomun._locale }) }}">{%trans%}calendario.ofertas{%endtrans%}</a>
+
+                            {%else%}
+                                <a class="nav-link" href="{{ path('calendaroffer', { '_locale': datoscomun._locale }) }}">{%trans%}calendario.ofertas{%endtrans%}</a>
+
+                            {%endif%}
+
+
+                        </li>
+                   
+                    </ul>
+                            
+                  <form class="form-inline my-2 my-lg-0">
+
+                      
+
+
+                            <label for="slclenguaje" class="text-white mr-2">{%trans%}lenguaje{%endtrans%}</label>
+                            <select id="slclenguaje" class="form-control">
+                                {%if datoscomun._locale=="es"%} 
+
+                                    <option value="{{ path(app.request.get('_route'), app.request.get('_route_params')|merge({'_locale': 'es'})) }}" selected>{%trans%}lenguaje.espanol{%endtrans%}</option>
+
+                                    {%else%}
+                                        <option value="{{ path(app.request.get('_route'), app.request.get('_route_params')|merge({'_locale': 'es'})) }}">{%trans%}lenguaje.espanol{%endtrans%}</option>
+
+                                    {%endif%}
+
+                                    {%if datoscomun._locale=="en"%} 
+
+                                        <option value="{{ path(app.request.get('_route'), app.request.get('_route_params')|merge({'_locale': 'en'})) }}" selected>{%trans%}leguaje.ingles{%endtrans%}</option>
+
+                                    {%else%}
+                                        <option value="{{ path(app.request.get('_route'), app.request.get('_route_params')|merge({'_locale': 'en'})) }}">{%trans%}leguaje.ingles{%endtrans%}</option>
+
+                                    {%endif%}    
+
+
+                            </select>
+                        
+
+                    </form>                   
+                       
+                            <!--
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                            -->
+                </div>
+            </nav>
+        {%endblock%}
+
+        {%block seccion%}
+            <section>
+            </section>
+        {%endblock%}
+
+        {%block pie%}
+            <footer>
+            </footer>
+        {%endblock%}
+
+
+    </body> 
+</html>
+

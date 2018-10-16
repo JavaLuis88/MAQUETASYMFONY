@@ -1,0 +1,99 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Reservasclientes
+ *
+ * @ORM\Table(name="diasreservas")
+ * @ORM\Entity
+ */
+class DiasOfertas {
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="dia", type="datetime", nullable=false)
+     */
+    private $dia;
+
+    /**
+     * @var \Reservasclientes
+     *
+     * @ORM\ManyToOne(targetEntity="DiasOfertas",inversedBy="dias")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="diaoferta", referencedColumnName="id")
+     * })
+     */
+    private $oferta;
+
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set dia
+     *
+     * @param \DateTime $dia
+     *
+     * @return DiasReservas
+     */
+    public function setDia($dia)
+    {
+        $this->dia = $dia;
+
+        return $this;
+    }
+
+    /**
+     * Get dia
+     *
+     * @return \DateTime
+     */
+    public function getDia()
+    {
+        return $this->dia;
+    }
+
+    /**
+     * Set reserva
+     *
+     * @param \AppBundle\Entity\DiasReservas $reserva
+     *
+     * @return DiasReservas
+     */
+    public function setReserva(\AppBundle\Entity\DiasReservas $reserva = null)
+    {
+        $this->reserva = $reserva;
+
+        return $this;
+    }
+
+    /**
+     * Get reserva
+     *
+     * @return \AppBundle\Entity\DiasReservas
+     */
+    public function getReserva()
+    {
+        return $this->reserva;
+    }
+}

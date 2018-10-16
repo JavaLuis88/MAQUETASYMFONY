@@ -1,0 +1,41 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 27-dic-2017, 11:09:48
+    Author     : Fu-Manchu
+*/
+
+.enlacereserva {
+    text-decoration:none;
+
+}
+
+@media (max-width: 767px) {
+    h2.cabecerarecinto{
+
+        font-size:1em
+
+    }
+    h3.subcabecerarecinto {
+      font-size: 0.5em
+    }
+
+}    
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+
+}    
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+
+
+}
+
+@media (min-width: 1200px) {
+
+}

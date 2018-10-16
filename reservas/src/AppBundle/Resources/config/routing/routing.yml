@@ -1,0 +1,57 @@
+
+
+homepage:
+    path:      /
+    defaults:  { _controller: AppBundle:Default:index }
+
+
+homepagelanguage:
+    path:      /{_locale}
+    defaults:  { _controller: AppBundle:Default:homepagelanguage }
+    requirements:
+        _locale: es|en
+
+calendaroffer:
+    path:      /{_locale}/Calendar
+    defaults:  { _controller: AppBundle:Default:calendaroffer}
+    requirements:
+        _locale: es|en
+        
+       
+ajaxurl:
+    path:      /{_locale}/AjaxURL
+    defaults:  { _controller: AppBundle:Default:ajaxurl}
+    requirements:
+        _locale: es|en
+        
+language:
+    path:      /{_locale}/Language
+    defaults:  { _controller: AppBundle:Default:language}
+    requirements:
+        _locale: es|en
+        
+getdayswithoffer:
+    path:      /{_locale}/daysWithOffer
+    defaults:  { _controller: AppBundle:Default:getdayswithoffer}
+    requirements:
+        _locale: es|en        
+        
+        
+getoffersday:
+    path:      /{_locale}/offersDay
+    defaults:  { _controller: AppBundle:Default:getoffersday}
+    requirements:
+        _locale: es|en    
+        
+        
+reservation:
+    path:      /{_locale}/Reservation/{idoferta}
+    defaults:  { _controller: AppBundle:Default:reservation}
+    requirements:
+        _locale: es|en        
+                
+ 
+        
+                
+ 
+        

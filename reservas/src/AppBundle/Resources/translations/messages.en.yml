@@ -1,0 +1,81 @@
+#Menu de navegacion
+menu: Menu
+inicio: Start
+calendario.ofertas: Offer calendar
+ofertas.recinto: Offers of the enclosure
+lenguaje: Language
+lenguaje.espanol: Spanish
+leguaje.ingles: English
+
+#Pagina de inicio
+no.hay.ofertas.dia: No offers today
+los.dias.del: The days of
+por.solo: for only
+euros: Euros
+reservar: Reserve
+ofertas.del.dia: Offers of the day
+#Pagina calendario
+lunes: Monday
+martes: Tuesday
+miercoles: Wednesday
+jueves: Thursday
+viernes: Friday
+sabado: Saturday
+domingo: Sunday
+enero: January
+febrero: February
+marzo: March 
+abril: April
+mayo: May
+junio: June
+julio: July
+agosto: August
+septiembre: September
+octubre: October
+noviembre: November
+diciembre: December
+mes: Month
+anyo: Year
+ver.ofertas.mes: See offers of the month
+cargando: Loading
+se.ha.producido.un.error: An error has occurred
+
+#Pagina de reserva
+nombre: First name
+apellidos: Surnames
+direccion: Address
+medio.de.pago: Payment method
+oferta.ya.no.disponible: The offer is no longer available
+reserva.realizada: The reservation has already been made
+error.reserva: Error when booking
+volver.inicio: Back to top
+introduce.tus.datos: Enter your data
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
